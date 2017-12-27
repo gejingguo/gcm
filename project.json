@@ -1,0 +1,74 @@
+{
+	"name": "test_pro",
+	"parallel": true,
+	"hosts": [
+		{
+			"id": 1,
+			"name": "host_ubuntu",
+			"host": "111.231.64.47:22",
+			"user": "ubuntu",
+			"pass": "Gejingguo@004",
+			"root_path": "/home/ubuntu"
+		},
+		{
+			"id": 2,
+			"name": "host_root",
+			"host": "111.231.64.47:22",
+			"user": "root",
+			"pass": "Gejingguo@004",
+			"root_path": "/root"
+		}
+	],
+	"scripts": [
+		{
+			"id": 1,
+			"name": "script1",
+			"desc": "test script 1",
+			"body": "echo 'script1'; pwd;"
+		},
+		{
+			"id": 2,
+			"name": "script2",
+			"desc": "test script 2",
+			"body": "echo 'script2'; pwd; whoami; uname -a"
+		}
+	],
+	"groups": [
+		{
+			"id": 1,
+			"name": "group1",
+			"parallel": true
+		}
+	],
+	"tasks": [
+		{
+			"id": 1,
+			"name": "task1",
+			"group_id": 1,
+			"host_id": 1,
+			"src_file": "project.json",
+			"dst_file": "/home/ubuntu/project_1.json"
+		},
+		{
+			"id": 2,
+			"name": "task2",
+			"group_id": 1,
+			"host_id": 2,
+			"script_id": 1
+		}
+	],
+	"mail": {
+		"host": "smtp.yeah.net:25",
+		"user": "gejingguo@yeah.net",
+		"pass": "abc123",
+		"to": [
+			"404318634@qq.com"
+		],
+		"cc": [
+			"404318634@qq.com",
+			"343586350@qq.com"
+		],
+		"subject": "test project mail subject",
+		"body": "test project mail body."
+	}
+}

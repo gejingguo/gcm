@@ -1,0 +1,1 @@
+{"build_id":1,"build_time":"2017-11-27 21:16:53","used_time":0.6690383,"successed_tasks":[{"id":1,"name":"task1","used_seconds":0.611035},{"id":2,"name":"task2","used_seconds":0.6690383}],"failed_tasks":null,"successed_groups":[{"id":1,"name":"group1","used_seconds":0.6690383,"err_task_num":0}],"failed_groups":null}
